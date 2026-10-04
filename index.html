@@ -39,8 +39,7 @@
 
   /* Hero */
   .hero { padding: 4rem 0 5rem; display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; }
-  .hero-logo-box { background: var(--tape-light); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 4px; }
-  .hero-logo-text { font-family: var(--serif-display); font-size: clamp(3.5rem, 8vw, 6rem); color: var(--tape); font-style: italic; animation: float 6s ease-in-out infinite; }
+  .hero img { width: 100%; height: auto; display: block; }
   .hero h1 { font-family: var(--serif-display); font-weight: 400; font-size: clamp(2.8rem, 6vw, 4.8rem); line-height: 1.02; margin: 0 0 1.5rem; letter-spacing: -0.01em; }
   .hero p { margin: 0; max-width: 32rem; font-size: 1.35rem; color: rgba(16, 26, 51, 0.85); font-style: italic; }
 
@@ -84,17 +83,10 @@
   footer { border-top: 6px solid var(--tape); padding: 3rem 0; font-size: 1rem; background: var(--paper); }
   footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
 
-  @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-  }
-
   @media (max-width: 760px) {
     .hero, .week-body, .blocks, .contact-grid { grid-template-columns: 1fr; }
     .block:nth-child(n) { margin-top: 0; min-height: 0; }
     .hero { gap: 2rem; padding: 2rem 0 3rem; }
-    .hero-logo-box { max-height: 250px; }
     .contact-grid { gap: 2rem; }
     nav a { margin-left: 1rem; }
     header .wrap { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
@@ -117,9 +109,8 @@
 
 <main>
   <section class="wrap hero">
-    <div class="hero-logo-box">
-      <div class="hero-logo-text">LitLab</div>
-    </div>
+    <!-- Pulling litlab-logo.png directly from your repository root folder -->
+    <img src="litlab-logo.png" alt="Lit Lab logo: blue paper-cut letters spelling LIT LAB">
     <div>
       <h1>A small lab for reading closely.</h1>
       <p>Part hangout, part workshop, part lecture.</p>
@@ -137,8 +128,8 @@
 
       <div class="week-body">
         <div>
-          <p>Every great piece of writing faces the ultimate challenge of its own conclusion. How do authors stick the landing without breaking the spell? In this lab cycle, we dissect structural alignment, terminal cadences, and lingering emotional notes left at a story's close.</p>
-          <p>We trace transitions from standard resolutions to experimental final bars. Join us as we evaluate what stays with a reader long after the book has been shut closed on the nightstand.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p><a href="#contact" class="read-link">Join the next discussion</a></p>
         </div>
         <aside>
@@ -159,17 +150,17 @@
     <div class="blocks">
       <div class="block">
         <h3>Reading list</h3>
-        <p>Browse through the complete books, short stories, and critical essays we are tackling this season.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
         <a href="#focus">Browse the list</a>
       </div>
       <div class="block">
         <h3>Past focuses</h3>
-        <p>Review insights, community notes, and reading materials compiled from our previous lab sessions.</p>
+        <p>Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
         <a href="#focus">Open the archive</a>
       </div>
       <div class="block">
         <h3>About Lit Lab</h3>
-        <p>A structured sanctuary for deep, deliberate textual analysis and casual literary discussions.</p>
+        <p>Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
         <a href="#contact">Learn more</a>
       </div>
     </div>
@@ -180,3 +171,5 @@
     <div class="wrap contact-grid">
       <div class="contact-info">
         <h2>Say hello.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum, felis vel luctus sollicitudin, magna mi interdum id elementum.</p>
+        <p style="margin-top: 2rem; font-size: 1rem; opacity: 0.8;">Direct Email:<br>
