@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lit Lab</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
 <style>
   :root {
     --paper: #fdfdfb;
@@ -31,47 +31,71 @@
   .wrap { max-width: 68rem; margin: 0 auto; padding: 0 1.5rem; }
 
   /* Header */
+  header { border-bottom: 1px solid rgba(16, 26, 51, 0.08); }
   header .wrap { display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; padding-bottom: 1.5rem; }
-  .wordmark { font-family: var(--serif-display); font-size: 1.6rem; text-decoration: none; }
-  nav a { margin-left: 1.5rem; text-decoration: none; border-bottom: 2px solid transparent; }
+  .wordmark { font-family: var(--serif-display); font-size: 1.8rem; text-decoration: none; font-weight: 400; letter-spacing: -0.02em; }
+  nav a { margin-left: 1.5rem; text-decoration: none; border-bottom: 2px solid transparent; transition: border-color 0.2s ease; }
   nav a:hover { border-bottom-color: var(--tape); }
 
   /* Hero */
-  .hero { padding: 2rem 0 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-  .hero img { width: 100%; height: auto; display: block; }
-  .hero h1 { font-family: var(--serif-display); font-weight: 400; font-size: clamp(2.6rem, 6vw, 4.5rem); line-height: 1.02; margin: 0 0 1rem; }
-  .hero p { margin: 0; max-width: 32rem; }
+  .hero { padding: 4rem 0 5rem; display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; }
+  .hero-logo-box { background: var(--tape-light); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 4px; }
+  .hero-logo-text { font-family: var(--serif-display); font-size: clamp(3.5rem, 8vw, 6rem); color: var(--tape); font-style: italic; animation: float 6s ease-in-out infinite; }
+  .hero h1 { font-family: var(--serif-display); font-weight: 400; font-size: clamp(2.8rem, 6vw, 4.8rem); line-height: 1.02; margin: 0 0 1.5rem; letter-spacing: -0.01em; }
+  .hero p { margin: 0; max-width: 32rem; font-size: 1.35rem; color: rgba(16, 26, 51, 0.85); font-style: italic; }
 
-  /* This week: edit everything inside this block */
-  .week { background: var(--tape); color: #fff; padding: 4rem 0 5rem; margin-top: 1rem; }
-  .week-label { display: inline-block; background: var(--paper); color: var(--tape); font-family: var(--serif-display); font-size: 1.5rem; padding: 0.1rem 1rem; margin: 0 0 2rem; }
-  .week h2 { font-family: var(--serif-display); font-weight: 400; font-size: clamp(2.4rem, 6vw, 4.8rem); line-height: 1.05; margin: 0 0 0.5rem; max-width: 18ch; }
-  .week .byline { font-style: italic; margin: 0 0 2.5rem; opacity: 0.9; }
-  .week-body { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; }
-  .week-body p { margin: 0 0 1.2rem; }
-  .week-body p:first-child::first-letter { font-family: var(--serif-display); float: left; font-size: 4.6rem; line-height: 0.8; padding: 0.35rem 0.6rem 0 0; }
-  .week aside { background: var(--paper); color: var(--ink); padding: 1.5rem 1.75rem; align-self: start; }
-  .week aside h3 { font-family: var(--serif-display); font-weight: 400; font-size: 1.6rem; margin: 0 0 0.75rem; }
-  .week aside ul { margin: 0; padding-left: 1.1rem; }
-  .week aside li { margin-bottom: 0.5rem; }
+  /* Current Focus Section */
+  .week { background: var(--tape); color: #fff; padding: 5rem 0 6rem; }
+  .week-label { display: inline-block; background: var(--paper); color: var(--tape); font-family: var(--serif-display); font-size: 1.4rem; padding: 0.1rem 1rem; margin: 0 0 2rem; border-radius: 2px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em; font-weight: 600; font-family: sans-serif; }
+  .week h2 { font-family: var(--serif-display); font-weight: 400; font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.05; margin: 0 0 0.5rem; max-width: 18ch; }
+  .week .byline { font-style: italic; margin: 0 0 2.5rem; opacity: 0.9; font-size: 1.1rem; }
+  .week-body { display: grid; grid-template-columns: 1.4fr 1fr; gap: 4rem; }
+  .week-body p { margin: 0 0 1.5rem; font-size: 1.25rem; }
+  .week-body p:first-child::first-letter { font-family: var(--serif-display); float: left; font-size: 5rem; line-height: 0.8; padding: 0.35rem 0.6rem 0 0; }
+  .week-body .read-link { display: inline-block; margin-top: 1rem; font-weight: 600; text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 2px; }
+  .week aside { background: var(--paper); color: var(--ink); padding: 2rem; align-self: start; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+  .week aside h3 { font-family: var(--serif-display); font-weight: 400; font-size: 1.8rem; margin: 0 0 1rem; border-bottom: 1px solid rgba(16, 26, 51, 0.1); padding-bottom: 0.5rem; }
+  .week aside ul { margin: 0; padding-left: 1.2rem; }
+  .week aside li { margin-bottom: 0.75rem; }
 
   /* More sections */
-  .more { padding: 4.5rem 0; }
-  .more h2 { font-family: var(--serif-display); font-weight: 400; font-size: 2.4rem; margin: 0 0 2rem; }
-  .blocks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-  .block { background: var(--tape-light); padding: 1.75rem; min-height: 15rem; display: flex; flex-direction: column; }
+  .more { padding: 5rem 0; }
+  .more h2 { font-family: var(--serif-display); font-weight: 400; font-size: 2.6rem; margin: 0 0 2.5rem; }
+  .blocks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 5rem; }
+  .block { background: var(--tape-light); padding: 2rem; min-height: 16rem; display: flex; flex-direction: column; border-radius: 4px; }
   .block:nth-child(2) { margin-top: 1.5rem; }
   .block:nth-child(3) { margin-top: 0.5rem; }
-  .block h3 { font-family: var(--serif-display); font-weight: 400; font-size: 1.9rem; line-height: 1.1; margin: 0 0 0.75rem; }
-  .block p { margin: 0 0 1rem; }
+  .block h3 { font-family: var(--serif-display); font-weight: 400; font-size: 2rem; line-height: 1.1; margin: 0 0 0.75rem; }
+  .block p { margin: 0 0 1rem; color: rgba(16, 26, 51, 0.85); }
   .block a { margin-top: auto; font-weight: 600; text-decoration-thickness: 2px; text-underline-offset: 4px; text-decoration-color: var(--tape); }
 
-  footer { border-top: 6px solid var(--tape); padding: 2rem 0 3rem; font-size: 1rem; }
+  /* Contact Form Section */
+  .contact-section { background: #f4f4f0; padding: 5rem 0; border-radius: 4px; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; }
+  .contact-info h2 { font-family: var(--serif-display); font-size: 2.8rem; font-weight: 400; margin: 0 0 1rem; }
+  .contact-form-wrapper form { display: flex; flex-direction: column; gap: 1.25rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+  .form-group label { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(16, 26, 51, 0.7); }
+  .form-group input, .form-group textarea { background: var(--paper); border: 1px solid rgba(16, 26, 51, 0.15); padding: 0.75rem 1rem; font-family: var(--serif-body); font-size: 1.1rem; color: var(--ink); border-radius: 4px; transition: border-color 0.2s; }
+  .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--tape); box-shadow: 0 0 0 3px var(--tape-light); }
+  .submit-btn { background: var(--ink); color: var(--paper); border: none; padding: 1rem 2rem; font-family: var(--serif-body); font-size: 1.1rem; font-weight: 600; cursor: pointer; border-radius: 4px; align-self: flex-start; transition: background 0.2s; }
+  .submit-btn:hover { background: var(--tape); }
+
+  footer { border-top: 6px solid var(--tape); padding: 3rem 0; font-size: 1rem; background: var(--paper); }
   footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
 
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
   @media (max-width: 760px) {
-    .hero, .week-body, .blocks { grid-template-columns: 1fr; }
+    .hero, .week-body, .blocks, .contact-grid { grid-template-columns: 1fr; }
     .block:nth-child(n) { margin-top: 0; min-height: 0; }
+    .hero { gap: 2rem; padding: 2rem 0 3rem; }
+    .hero-logo-box { max-height: 250px; }
+    .contact-grid { gap: 2rem; }
     nav a { margin-left: 1rem; }
     header .wrap { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
     nav a:first-child { margin-left: 0; }
@@ -84,80 +108,75 @@
   <div class="wrap">
     <a class="wordmark" href="#">Lit Lab</a>
     <nav>
-      <a href="#this-week">This week</a>
+      <a href="#focus">Current Focus</a>
       <a href="#archive">Archive</a>
-      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
   <section class="wrap hero">
-    <!-- Put litlab-logo.png in the same folder as this file -->
-    <img src="litlab-logo.png" alt="Lit Lab logo: blue paper-cut letters spelling LIT LAB">
+    <div class="hero-logo-box">
+      <div class="hero-logo-text">LitLab</div>
+    </div>
     <div>
       <h1>A small lab for reading closely.</h1>
-      <p>Placeholder: a sentence or two about what Lit Lab is, who it's for, and what people can expect to find here.</p>
+      <p>Part hangout, part workshop, part lecture.</p>
     </div>
   </section>
 
   <!-- ============================================================
-       THIS WEEK: edit this whole section each week.
-       Change the title, byline, paragraphs and the list on the right.
+       CURRENT FOCUS SECTION
        ============================================================ -->
-  <section class="week" id="this-week">
+  <section class="week" id="focus">
     <div class="wrap">
-      <p class="week-label">This week</p>
-      <h2>Placeholder title for this week's feature</h2>
-      <p class="byline">Week of October 5 &middot; Placeholder author or subject</p>
+      <p class="week-label">Current Focus</p>
+      <h2>Endings</h2>
+      <p class="byline">Exploring the art of the final page</p>
 
       <div class="week-body">
         <div>
-          <p>Placeholder paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-          <p>Placeholder paragraph. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
-          <p><a href="#">Read the full piece</a></p>
+          <p>Every great piece of writing faces the ultimate challenge of its own conclusion. How do authors stick the landing without breaking the spell? In this lab cycle, we dissect structural alignment, terminal cadences, and lingering emotional notes left at a story's close.</p>
+          <p>We trace transitions from standard resolutions to experimental final bars. Join us as we evaluate what stays with a reader long after the book has been shut closed on the nightstand.</p>
+          <p><a href="#contact" class="read-link">Join the next discussion</a></p>
         </div>
         <aside>
           <h3>On the table</h3>
           <ul>
-            <li>Placeholder: a book or text</li>
-            <li>Placeholder: a question to think about</li>
-            <li>Placeholder: an event or date</li>
+            <li><strong>Reading:</strong> Sense of an Ending by Julian Barnes</li>
+            <li><strong>Question:</strong> When does ambiguity feel like art rather than a cop-out?</li>
+            <li><strong>Next Meetup:</strong> Thursday evening workshop</li>
           </ul>
         </aside>
       </div>
     </div>
   </section>
-  <!-- ================= end of THIS WEEK ================= -->
 
+  <!-- ================= ARCHIVE SECTION ================= -->
   <section class="wrap more" id="archive">
     <h2>More from the lab</h2>
     <div class="blocks">
       <div class="block">
         <h3>Reading list</h3>
-        <p>Placeholder text about the books and pieces the lab is working through.</p>
-        <a href="#">Browse the list</a>
+        <p>Browse through the complete books, short stories, and critical essays we are tackling this season.</p>
+        <a href="#focus">Browse the list</a>
       </div>
       <div class="block">
-        <h3>Past weeks</h3>
-        <p>Placeholder text about earlier features, collected in one place.</p>
-        <a href="#">Open the archive</a>
+        <h3>Past focuses</h3>
+        <p>Review insights, community notes, and reading materials compiled from our previous lab sessions.</p>
+        <a href="#focus">Open the archive</a>
       </div>
-      <div class="block" id="about">
+      <div class="block">
         <h3>About Lit Lab</h3>
-        <p>Placeholder text about who runs this and how to get in touch.</p>
-        <a href="#">Say hello</a>
+        <p>A structured sanctuary for deep, deliberate textual analysis and casual literary discussions.</p>
+        <a href="#contact">Learn more</a>
       </div>
     </div>
   </section>
-</main>
 
-<footer>
-  <div class="wrap">
-    <span>&copy; 2026 Lit Lab</span>
-    <span>Placeholder: email or social link</span>
-  </div>
-</footer>
-
-</body>
-</html>
+  <!-- ================= CONTACT FORM SECTION ================= -->
+  <section class="contact-section" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <h2>Say hello.</h2>
