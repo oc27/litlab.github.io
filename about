@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Lit Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="tape-bg" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Lit Lab</a>
+    <nav>
+      <a href="index.html#focus">Current Focus</a>
+      <a href="index.html#event">Next Event</a>
+      <a href="index.html#archive">Archive</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap page-title">
+    <h1>About Lit Lab</h1>
+    <p class="lede">Placeholder: one or two sentences on what Lit Lab is and why it exists.</p>
+  </section>
+
+  <section class="wrap about-section">
+    <h2>Our story</h2>
+    <div class="about-text">
+      <p>Placeholder paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Placeholder paragraph. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </section>
+
+  <section class="wrap about-section">
+    <h2>What happens here</h2>
+    <div class="about-list">
+      <div class="block">
+        <h3>Hangout</h3>
+        <p>Placeholder text about the social side of Lit Lab.</p>
+      </div>
+      <div class="block">
+        <h3>Workshop</h3>
+        <p>Placeholder text about the hands-on, make-something side.</p>
+      </div>
+      <div class="block">
+        <h3>Lecture</h3>
+        <p>Placeholder text about the talks and guest speakers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap about-section">
+    <h2>Who runs it</h2>
+    <div class="about-text">
+      <p>Placeholder: a short bio of you or the team behind Lit Lab.</p>
+    </div>
+  </section>
+
+  <section class="wrap about-cta">
+    <a class="ticket-btn" href="index.html#event">See the next event</a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Lit Lab</span>
+    <span>Placeholder: email or social link</span>
+  </div>
+</footer>
+
+<script src="tape.js"></script>
+</body>
+</html>
