@@ -28,3 +28,19 @@
   var t;
   window.addEventListener("resize", function () { clearTimeout(t); t = setTimeout(draw, 200); });
 })();
+
+/* Experiments dropdown: tap to open/close (hover and keyboard focus also work via CSS) */
+(function () {
+  var dd = document.querySelector(".dropdown");
+  if (!dd) return;
+  var btn = dd.querySelector(".dropdown-toggle");
+  btn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    var open = dd.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open);
+  });
+  document.addEventListener("click", function () {
+    dd.classList.remove("open");
+    btn.setAttribute("aria-expanded", "false");
+  });
+})();
