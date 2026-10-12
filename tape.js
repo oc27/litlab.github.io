@@ -29,18 +29,28 @@
   window.addEventListener("resize", function () { clearTimeout(t); t = setTimeout(draw, 200); });
 })();
 
-/* Experiments dropdown: tap to open/close (hover and keyboard focus also work via CSS) */
+/* Experiment page: highlight the current section in the side menu, and fade items in on scroll */
 (function () {
-  var dd = document.querySelector(".dropdown");
-  if (!dd) return;
-  var btn = dd.querySelector(".dropdown-toggle");
-  btn.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = dd.classList.toggle("open");
-    btn.setAttribute("aria-expanded", open);
-  });
-  document.addEventListener("click", function () {
-    dd.classList.remove("open");
-    btn.setAttribute("aria-expanded", "false");
-  });
+  if (!("IntersectionObserver" in window)) return;
+  var links = document.querySelectorAll(".exp-toc a");
+  if (links.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (l) { l.classList.toggle("active", l.getAttribute("href") === "#" + e.target.id); });
+      });
+    }, { rootMargin: "-25% 0px -65% 0px" });
+    links.forEach(function (l) {
+      var el = document.getElementById(l.getAttribute("href").slice(1));
+      if (el) spy.observe(el);
+    });
+  }
+  var items = document.querySelectorAll(".reveal");
+  if (!items.length) return;
+  var show = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add("in"); show.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  items.forEach(function (el) { show.observe(el); });
 })();

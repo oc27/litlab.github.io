@@ -17,13 +17,7 @@
     <a class="wordmark" href="index.html">Lit Lab</a>
     <nav>
       <a href="index.html#experiment">Current Experiment</a>
-      <div class="dropdown">
-        <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Experiments</button>
-        <div class="dropdown-menu">
-          <a href="experiment-1.html">Experiment 1: Endings</a>
-          <!-- Add each new experiment page here as another link -->
-        </div>
-      </div>
+      <a href="experiments.html">Experiments</a>
       <a href="index.html#event">Next Event</a>
       <a href="index.html#archive">Archive</a>
       <a href="about.html">About</a>
@@ -33,83 +27,120 @@
 </header>
 
 <main>
-  <section class="wrap exp-header">
-    <p class="exp-label">Experiment 1</p>
+  <!-- ================= HERO ================= -->
+  <section class="wrap exp-hero">
+    <span class="exp-ghost" aria-hidden="true">01</span>
+    <p class="crumbs"><a href="experiments.html">Experiments</a> / Experiment 1</p>
     <h1>Endings</h1>
     <p class="lede">Exploring the art of the final page.</p>
-  </section>
-
-  <!-- ================= DESCRIPTION ================= -->
-  <section class="wrap exp-section">
-    <h2>The experiment</h2>
-    <div class="about-text">
-      <p>Every reader has a relationship with the last page. Some of us rush toward it; others slow down and put the book away with a few chapters left, unwilling to say goodbye. In this first experiment, we look closely at how stories end, and what an ending asks of the person holding the book.</p>
-      <p>Over several weeks we read, argue and listen: to endings that close every door, endings that leave one open, and endings that change what came before. Placeholder: add anything here about the readings, the format and who the experiment is for.</p>
-      <p>Come with an opinion, or come to lose one.</p>
+    <div class="tags">
+      <span class="tag">Reading</span><span class="tag">Discussion</span><span class="tag">Workshop</span>
     </div>
   </section>
 
-  <!-- ================= PROMPTS: 5 to 7 questions, edit freely ================= -->
-  <section class="wrap exp-section" id="prompts">
-    <h2>Prompts</h2>
-    <ol class="prompts">
-      <li>Do you remember the last line of the last book you finished?</li>
-      <li>Is an ending a promise made on page one, or a surprise the book keeps hidden?</li>
-      <li>What is the difference between a book that ends and a book that simply stops?</li>
-      <li>Have you ever refused to finish a book you loved? What were you protecting?</li>
-      <li>Which ending has stayed with you longest, and what would change if the last page were torn out?</li>
-      <li>Should an ending resolve everything, or leave the door open?</li>
-      <li>If your own life were a book, where would you want the last chapter to begin?</li>
-    </ol>
+  <!-- Quick facts: edit freely -->
+  <section class="wrap">
+    <dl class="exp-meta">
+      <div><dt>Status</dt><dd>Now running</dd></div>
+      <div><dt>Started</dt><dd>September 2026</dd></div>
+      <div><dt>Format</dt><dd>Hangout, workshop, lecture</dd></div>
+      <div><dt>Where</dt><dd>London</dd></div>
+    </dl>
   </section>
 
-  <!-- ============================================================
-       EXPERIMENT FIELDNOTES: newest first.
-       To add an entry, copy a whole <article class="fieldnote"> block,
-       paste it at the TOP of the list, then change the date, location,
-       title and paragraphs.
-       ============================================================ -->
-  <section class="wrap exp-section" id="fieldnotes">
-    <h2>Experiment Fieldnotes</h2>
-    <div class="fieldnotes">
-      <article class="fieldnote">
+  <div class="wrap exp-layout">
+    <aside class="exp-toc" aria-label="On this page">
+      <p class="toc-title">On this page</p>
+      <a href="#overview" class="active"><span>01</span>The experiment</a>
+      <a href="#prompts"><span>02</span>Prompts</a>
+      <a href="#fieldnotes"><span>03</span>Fieldnotes</a>
+    </aside>
+
+    <div class="exp-content">
+
+      <!-- ================= DESCRIPTION ================= -->
+      <section class="exp-section" id="overview">
+        <h2>The experiment</h2>
+        <div class="about-text">
+          <p>Every reader has a relationship with the last page. Some of us rush toward it; others slow down and put the book away with a few chapters left, unwilling to say goodbye. In this first experiment, we look closely at how stories end, and what an ending asks of the person holding the book.</p>
+          <p>Over several weeks we read, argue and listen: to endings that close every door, endings that leave one open, and endings that change what came before. Placeholder: add anything here about the readings, the format and who the experiment is for.</p>
+        </div>
+        <blockquote class="pull">Come with an opinion, or come to lose one.</blockquote>
+      </section>
+
+      <!-- ================= PROMPTS: 5 to 7 questions, edit freely ================= -->
+      <section class="exp-section" id="prompts">
+        <h2>Prompts</h2>
+        <ol class="prompt-grid">
+        <li class="prompt-card reveal"><span class="prompt-num">01</span><p>Do you remember the last line of the last book you finished?</p></li>
+        <li class="prompt-card reveal"><span class="prompt-num">02</span><p>Is an ending a promise made on page one, or a surprise the book keeps hidden?</p></li>
+        <li class="prompt-card reveal"><span class="prompt-num">03</span><p>What is the difference between a book that ends and a book that simply stops?</p></li>
+        <li class="prompt-card reveal"><span class="prompt-num">04</span><p>Have you ever refused to finish a book you loved? What were you protecting?</p></li>
+        <li class="prompt-card reveal"><span class="prompt-num">05</span><p>Which ending has stayed with you longest, and what would change if the last page were torn out?</p></li>
+        <li class="prompt-card reveal"><span class="prompt-num">06</span><p>Should an ending resolve everything, or leave the door open?</p></li>
+        <li class="prompt-card reveal"><span class="prompt-num">07</span><p>If your own life were a book, where would you want the last chapter to begin?</p></li>
+        </ol>
+      </section>
+
+      <!-- ============================================================
+           EXPERIMENT FIELDNOTES: newest first.
+           To add an entry, copy a whole <article class="fieldnote"> block,
+           paste it at the TOP of the list, then change the date, location,
+           tags, title and paragraphs. The top entry is labelled "Latest"
+           automatically.
+           ============================================================ -->
+      <section class="exp-section" id="fieldnotes">
+        <h2>Experiment Fieldnotes</h2>
+        <div class="fieldnotes">
+      <article class="fieldnote reveal">
         <div class="fieldnote-meta">
           <time class="fieldnote-date">12 October 2026</time>
           <span class="fieldnote-loc">Placeholder venue, London</span>
         </div>
         <div class="fieldnote-body">
+          <div class="tags"><span class="tag">Discussion</span><span class="tag">Reading</span></div>
           <h3>Placeholder entry title</h3>
           <p>Placeholder paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <p>Placeholder paragraph. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p>Placeholder paragraph. Curabitur pretium tincidunt lacus, nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
         </div>
       </article>
-      <article class="fieldnote">
+      <article class="fieldnote reveal">
         <div class="fieldnote-meta">
           <time class="fieldnote-date">5 October 2026</time>
           <span class="fieldnote-loc">Placeholder location, London</span>
         </div>
         <div class="fieldnote-body">
+          <div class="tags"><span class="tag">Workshop</span></div>
           <h3>Placeholder entry title</h3>
           <p>Placeholder paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <p>Placeholder paragraph. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p>Placeholder paragraph. Curabitur pretium tincidunt lacus, nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
         </div>
       </article>
-      <article class="fieldnote">
+      <article class="fieldnote reveal">
         <div class="fieldnote-meta">
           <time class="fieldnote-date">28 September 2026</time>
           <span class="fieldnote-loc">Placeholder location, London</span>
         </div>
         <div class="fieldnote-body">
+          <div class="tags"><span class="tag">Hangout</span><span class="tag">Reading</span></div>
           <h3>Placeholder entry title</h3>
           <p>Placeholder paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <p>Placeholder paragraph. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p>Placeholder paragraph. Curabitur pretium tincidunt lacus, nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
         </div>
       </article>
+        </div>
+      </section>
+
+      <section class="exp-next">
+        <p class="toc-title">Next experiment</p>
+        <p class="next-title">Experiment 2: coming soon</p>
+        <a class="ticket-btn" href="experiments.html">All experiments</a>
+      </section>
     </div>
-  </section>
+  </div>
 </main>
 
 <footer>
