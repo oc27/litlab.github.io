@@ -5,13 +5,11 @@ content:
     type: collection
     path: ""
     extension: html
-    format: raw
+    format: code                # Switches the view mode to handle file paths properly
     exclude: [README.md, LICENSE, .pages.yml]
-    view:
-      primary: "{name}"          # Sets the sidebar collection title text
-      label: "{name}"            # Explicitly maps the page filename to the main editor header
     fields:
       - name: body
         label: Page Content
-        type: rich-text
-        key: ""
+        type: code
+        options:
+          mode: html
