@@ -36,7 +36,7 @@ content:
   - name: experiments
     label: Experiments 2 Revenge
     type: file
-    path: "Experiment 2: Revenge"
+    path: "experiment-1.html"
     format: raw
     fields:
       - name: body
