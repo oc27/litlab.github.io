@@ -34,7 +34,7 @@ content:
         key: ""
 
   - name: experiment-1
-    label: Experiments 2 Revenge
+    label: Experiments 2 Endings
     type: file
     path: "experiment-1.html"
     format: raw
@@ -44,3 +44,13 @@ content:
         type: rich-text
         key: ""
 
+  - name: experiment-2
+    label: Experiments 2 Revenge
+    type: file
+    path: "experiment-2.html"
+    format: raw
+    fields:
+      - name: body
+        label: Experiments Content
+        type: rich-text
+        key: ""
