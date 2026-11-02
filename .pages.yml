@@ -7,7 +7,12 @@ content:
     extension: html
     format: raw
     exclude: [README.md, LICENSE, .pages.yml]
+    view:
+      title: title # This tells Pages CMS to use the 'title' field for the sidebar name
     fields:
+      - name: title
+        label: Page Title
+        type: string
       - name: body
         label: Page Content
         type: rich-text
