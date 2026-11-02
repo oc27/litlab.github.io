@@ -4,34 +4,31 @@ content:
     label: Home Page
     type: file
     path: "index.html"
-    format: code
+    format: raw                  # 1. Changed to raw to protect your full HTML document structure
     fields:
       - name: body
         label: Home Page Content
-        type: code
-        options:
-          mode: html
+        type: rich-text          # 2. Changed to rich-text for visual editing
+        key: ""                  # 3. CRITICAL: Tells the CMS to load the entire HTML file into the visual box
 
   - name: about
     label: About Page
     type: file
     path: "about.html"
-    format: code
+    format: raw
     fields:
       - name: body
         label: About Page Content
-        type: code
-        options:
-          mode: html
+        type: rich-text
+        key: ""
 
   - name: experiments
     label: Experiments Page
     type: file
     path: "experiments.html"
-    format: code
+    format: raw
     fields:
       - name: body
         label: Experiments Content
-        type: code
-        options:
-          mode: html
+        type: rich-text
+        key: ""
