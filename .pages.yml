@@ -1,16 +1,37 @@
 media: media
 content:
-  - name: pages
-    label: Pages
-    type: collection
-    path: /                     # Tells Pages CMS to explicitly read the absolute root folder
-    extension: html
+  - name: index
+    label: Home Page
+    type: file
+    path: "index.html"
     format: code
-    exclude: [README.md, LICENSE, .pages.yml]
-    identifier: name            # Explicitly tells the CMS to index files by their filename
     fields:
       - name: body
-        label: Page Content
+        label: Home Page Content
+        type: code
+        options:
+          mode: html
+
+  - name: about
+    label: About Page
+    type: file
+    path: "about.html"
+    format: code
+    fields:
+      - name: body
+        label: About Page Content
+        type: code
+        options:
+          mode: html
+
+  - name: experiments
+    label: Experiments Page
+    type: file
+    path: "experiments.html"
+    format: code
+    fields:
+      - name: body
+        label: Experiments Content
         type: code
         options:
           mode: html
