@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experiment 2: Revenge | Lit Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="tape-bg" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Lit Lab</a>
+    <nav>
+      <a href="experiments.html">Experiments</a>
+      <a href="index.html#event">Next Event</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="wrap exp-hero">
+    <span class="exp-ghost" aria-hidden="true">02</span>
+    <p class="crumbs"><a href="experiments.html">Experiments</a> / Experiment 2</p>
+    <h1>Revenge</h1>
+    <p class="lede">Exploring the stories we tell about getting even.</p>
+  </section>
+
+  <!-- Quick facts: edit freely -->
+  <section class="wrap">
+    <dl class="exp-meta">
+      <div><dt>Status</dt><dd>Coming up</dd></div>
+      <div><dt>Started</dt><dd>November 2026</dd></div>
+      <div><dt>Format</dt><dd>Hangout, workshop, lecture</dd></div>
+      <div><dt>Where</dt><dd>London</dd></div>
+    </dl>
+  </section>
+
+  <div class="wrap exp-layout">
+    <aside class="exp-toc" aria-label="On this page">
+      <p class="toc-title">On this page</p>
+      <a href="#overview" class="active"><span>01</span>The experiment</a>
+      <a href="#prompts"><span>02</span>Prompts</a>
+      <a href="#fieldnotes"><span>03</span>Fieldnotes</a>
+    </aside>
+
+    <div class="exp-content">
+
+      <!-- ================= DESCRIPTION ================= -->
+      <section class="exp-section" id="overview">
+        <h2>The experiment</h2>
+        <div class="about-text">
+          <p>Placeholder draft: revenge is one of literature's oldest engines. From the Oresteia to The Count of Monte Cristo, from Medea to Kill Bill, stories keep returning to the wronged person with a plan.</p>
+          <p>But is revenge a dish best served cold, or a wound that keeps itself open? This experiment asks what we want when we want revenge, whether it is justice by another name, and what stories can offer instead of, or alongside, getting even.</p>
+        </div>
+        <blockquote class="pull">Is getting even ever really even?</blockquote>
+      </section>
+
+      <!-- ================= PROMPTS: 5 to 7 questions, edit freely ================= -->
+      <section class="exp-section" id="prompts">
+        <h2>Prompts</h2>
+        <ol class="prompt-grid">
+        <li class="prompt-card reveal"><span class="prompt-num">01</span><p>Why do we enjoy reading about revenge?</p></li>
+        <li class="prompt-card reveal"><span class="prompt-num">02</span><p>Is revenge the opposite of justice, or just justice without permission?</p></li>
+        <li class="prompt-card reveal"><span class="prompt-num">03</span><p>Who is the best avenger in literature, and what did it cost them?</p></li>
+        <li class="prompt-card reveal"><span class="prompt-num">04</span><p>Can a grudge be a form of attention, or even of love?</p></li>
+        <li class="prompt-card reveal"><span class="prompt-num">05</span><p>What is the difference between revenge and forgiveness in a story?</p></li>
+        <li class="prompt-card reveal"><span class="prompt-num">06</span><p>Is there a way to get even on the page that you never could in life?</p></li>
+        <li class="prompt-card reveal"><span class="prompt-num">07</span><p>If you could rewrite one revenge story so that it ends differently, which would it be?</p></li>
+        </ol>
+      </section>
+
+      <!-- ============================================================
+           EXPERIMENT FIELDNOTES: newest first.
+           To add an entry, copy a whole <article class="fieldnote"> block,
+           paste it at the TOP of the list, then change the date, location,
+           tags, title and paragraphs. The top entry is labelled "Latest"
+           automatically.
+           ============================================================ -->
+      <section class="exp-section" id="fieldnotes">
+        <h2>Experiment Fieldnotes</h2>
+        <div class="fieldnotes">
+          <p class="empty-note">Fieldnotes will appear here after the evening on Wednesday 11th November.</p>
+          <!-- TEMPLATE for a fieldnote. Delete the empty-note line above, then copy this block
+               (without the comment markers) and fill it in. Newest goes at the top.
+          <article class="fieldnote reveal">
+            <div class="fieldnote-meta">
+              <time class="fieldnote-date">Wed 11th November 2026</time>
+              <span class="fieldnote-loc">Harmonize Cafe, London</span>
+            </div>
+            <div class="fieldnote-body">
+              <div class="tags"><span class="tag">Discussion</span></div>
+              <h3>Title of the entry</h3>
+              <p>First paragraph.</p>
+              <p>Second paragraph.</p>
+            </div>
+          </article>
+          -->
+        </div>
+      </section>
+
+      <section class="exp-next">
+        <p class="toc-title">Next experiment</p>
+        <p class="next-title">Experiment 3: TBA</p>
+        <a class="ticket-btn" href="experiments.html">All experiments</a>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Lit Lab</span>
+    <span>Placeholder: email or social link</span>
+  </div>
+</footer>
+
+<script src="tape.js"></script>
+</body>
+</html>
