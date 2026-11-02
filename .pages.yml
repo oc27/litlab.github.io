@@ -7,6 +7,8 @@ content:
     extension: html
     format: raw
     exclude: [README.md, LICENSE, .pages.yml]
+    view:
+      primary: "{name}"          # This template explicitly grabs the file name
     fields:
       - name: body
         label: Page Content
