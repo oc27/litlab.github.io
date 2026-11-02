@@ -1,100 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lit Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="tape-bg" aria-hidden="true"></div>
 
-
-&nbsp;
-
-[Lit Lab](#) [Experiments](experiments.html) [Next Event](#event) [About](about.html)
-
-![Lit Lab logo: blue paper-cut letters spelling LIT LAB](litlab-logo.png)
-
-# Cultivating new ways of reading.
-
-Part hangout, part workshop, part lecture.
-
-
-
-Greetings
-
-## What is Litlab?
-
-Experiments · Rethinking the literary
-
-```
-  <div class="week-body">
-    <div>
-       <p>Litlab is an incubator for literary and cultural thinking.</p>
-      <p>We run participatory events in interesting places around London</p>
-      <p>There are eight experiments running any one time, you can find out about these below:</p>
-    <a class="ticket-btn" href="experiments.html" target="_blank" rel="noopener">Explore Experiments</a>
-    </div>
-    <aside>
-      <h3>On the table</h3>
-      <ul>
-        <li><strong>Now Reading:</strong>The Catch by Yrsa Daley Ward</li>
-        <li><strong>Current Experiment:</strong>Revenge</li>
-        <li><strong>Next Meetup:</strong>Weds 11th November, 7pm</li>
-      </ul>
-    </aside>
+<header>
+  <div class="wrap">
+    <a class="wordmark" href="#">Lit Lab</a>
+    <nav>
+      <a href="experiments.html">Experiments</a>
+      <a href="#event">Next Event</a>
+      <a href="about.html">About</a>
+    </nav>
   </div>
-</div>
-```
+</header>
 
+<main>
+  <section class="wrap hero">
+    <!-- Pulling litlab-logo.png directly from your repository root folder -->
+    <img src="litlab-logo.png" alt="Lit Lab logo: blue paper-cut letters spelling LIT LAB">
+    <div>
+      <h1>Cultivating new ways of reading.</h1>
+      <p>Part hangout, part workshop, part lecture.</p>
+    </div>
+  </section>
 
+  <!-- ============================================================
+       CURRENT EXPERIMENT SECTION
+       ============================================================ -->
+  <section class="week" id="experiment">
+    <div class="wrap">
+      <p class="week-label">Greetings</p>
+      <h2>What is Litlab?</h2>
+      <p class="byline">Experiments &middot; Rethinking the literary</p>
 
-&nbsp;
+      <div class="week-body">
+        <div>
+           <p>Litlab is an incubator for literary and cultural thinking.</p>
+          <p>We run participatory events in interesting places around London</p>
+          <p>There are eight experiments running any one time, you can find out about these below:</p>
+        <a class="ticket-btn" href="experiments.html" target="_blank" rel="noopener">Explore Experiments</a>
+        </div>
+        <aside>
+          <h3>On the table</h3>
+          <ul>
+            <li><strong>Now Reading:</strong>The Catch by Yrsa Daley Ward</li>
+            <li><strong>Current Experiment:</strong>Revenge</li>
+            <li><strong>Next Meetup:</strong>Weds 11th November, 7pm</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
 
-Next Event
+  <!-- ============================================================
+       NEXT EVENT SECTION: edit the date, title, venue, description
+       and the ticket link (Eventbrite, OutSavvy, Luma, etc.)
+       ============================================================ -->
+  <section class="wrap event" id="event">
+    <p class="event-label">Next Event</p>
+    <div class="event-grid">
+      <div class="event-date">
+        <span class="day">Weds 11th</span>
+        <span class="month">November</span>
+        <span class="time">7pm to 9pm</span>
+      </div>
+      <div>
+        <h2>Revenge</h2>
+        <p class="venue">Harmonize Cafe, 214 Stoke Newington High St, London N16 7HU</p>
+        <p>Our second Litlab is booked in. Bring your hunger for vengence, and your hunger for delicious plant based food to support the venue</p>
+        <a class="ticket-btn" href="https://www.eventbrite.com/" target="_blank" rel="noopener">Walk in</a>
+      </div>
+    </div>
+  </section>
+  <!-- ================= end of NEXT EVENT ================= -->
 
-Weds 11th November 7pm to 9pm
+  <!-- ================= ARCHIVE SECTION ================= -->
+  <section class="wrap more" id="archive">
+    <h2>More from the lab</h2>
+    <div class="blocks">
+      <div class="block">
+        <h3>Reading list</h3>
+        <p>A curated list of books relevant to the Lit Lab project (coming soon).</p>
+        <a href="reading-list.html">Browse the list</a>
+      </div>
+      <div class="block">
+        <h3>All experiments</h3>
+        <p>See the experiments that form Lit Lab.</p>
+        <a href="experiments.html">See all experiments</a>
+      </div>
+      <div class="block">
+        <h3>About Lit Lab</h3>
+        <p>Read our origin story and how you can interact with us</p>
+        <a href="about.html">Learn more</a>
+      </div>
+    </div>
+  </section>
 
-## Revenge
+  <!-- ================= CONTACT FORM SECTION ================= -->
+  <section class="contact-section" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <h2>Get in touch</h2>
+        <p>If you would like to get in touch, email oliconner@pm.me whilst we figure out the form</p>
+        <p style="margin-top: 2rem; font-size: 1rem; opacity: 0.8;">Direct Email:<br>
+          <a href="mailto:hello@example.com">hello@example.com</a></p>
+      </div>
+      <div class="contact-form-wrapper">
+        <!-- GitHub Pages can't process forms. Replace the action URL with your own
+             Formspree (or similar) endpoint, e.g. https://formspree.io/f/abcdwxyz -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
 
-Harmonize Cafe, 214 Stoke Newington High St, London N16 7HU
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Lit Lab</span>
+    <span>Placeholder: email or social link</span>
+  </div>
+</footer>
 
-Our second Litlab is booked in. Bring your hunger for vengence and delicious plant based food to support the venue
+<script src="tape.js"></script>
 
-[Walk in](https://www.eventbrite.com/)
-
-
-
-## More from the lab
-
-### Reading list
-
-A curated list of books relevant to the Lit Lab project (coming soon).
-
-[Browse the list](reading-list.html)
-
-### All experiments
-
-See the experiments that form Lit Lab.
-
-[See all experiments](experiments.html)
-
-### About Lit Lab
-
-Read our origin story and how you can interact with us
-
-[Learn more](about.html)
-
-
-
-## Get in touch
-
-If you would like to get in touch, email oliconner@pm.me whilst we figure out the form
-
-Direct Email:  
-[hello@example.com](mailto:hello@example.com)
-
-Name
-
-Email
-
-Message
-
-Send message
-
-© 2026 Lit Lab Placeholder: email or social link
-
-
-
-&nbsp;
+</body>
+</html>
