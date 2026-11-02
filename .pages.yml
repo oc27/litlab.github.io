@@ -32,3 +32,15 @@ content:
         label: Experiments Content
         type: rich-text
         key: ""
+
+  - name: experiments
+    label: Experiments Page
+    type: file
+    path: "Experiment 2: Revenge"
+    format: raw
+    fields:
+      - name: body
+        label: Experiments Content
+        type: rich-text
+        key: ""
+
