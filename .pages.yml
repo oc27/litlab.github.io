@@ -1,0 +1,12 @@
+media: media
+content:
+  - name: pages
+    label: Pages
+    type: collection
+    path: ./
+    format: raw
+    exclude: [README.md, LICENSE]
+    fields:
+      - name: body
+        label: Page Content
+        type: rich-text
