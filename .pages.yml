@@ -3,10 +3,12 @@ content:
   - name: pages
     label: Pages
     type: collection
-    path: ""
+    path: "./"                  # 1. Forces the CMS to scan the repository root directory
     extension: html
     format: code
     exclude: [README.md, LICENSE, .pages.yml]
+    view:
+      primary: "{name}"         # 2. Re-assert template mapping for raw filenames
     fields:
       - name: body
         label: Page Content
