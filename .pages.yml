@@ -5,14 +5,15 @@ content:
     type: collection
     path: ""
     extension: html
-    format: raw
+    format: yaml-frontmatter   # 1. Changed from 'raw' to save titles properly
     exclude: [README.md, LICENSE, .pages.yml]
     view:
-      title: title # This tells Pages CMS to use the 'title' field for the sidebar name
+      fields: [title]          # 2. Correct syntax to show the title in the sidebar list
     fields:
       - name: title
         label: Page Title
         type: string
+        required: true
       - name: body
         label: Page Content
         type: rich-text
