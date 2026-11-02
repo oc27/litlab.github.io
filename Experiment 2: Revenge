@@ -29,7 +29,7 @@
     <span class="exp-ghost" aria-hidden="true">02</span>
     <p class="crumbs"><a href="experiments.html">Experiments</a> / Experiment 2</p>
     <h1>Revenge</h1>
-    <p class="lede">Exploring the stories we tell about getting even.</p>
+    <p class="lede">tba.</p>
   </section>
 
   <!-- Quick facts: edit freely -->
@@ -56,8 +56,8 @@
       <section class="exp-section" id="overview">
         <h2>The experiment</h2>
         <div class="about-text">
-          <p>tba</p>
-          <p>tba</p>
+          <p>When Luigi Mangione shot and killed a CEO of a healthcare insurance company, the public realm polarised between support and condemnation. </p>
+          <p>From the most personal of infidelities to escalations in global conflict, revenge is a dish well explored through Litlab</p>
         </div>
         <blockquote class="pull">tba</blockquote>
       </section>
