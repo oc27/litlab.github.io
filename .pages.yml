@@ -4,6 +4,7 @@ content:
     label: Pages
     type: collection
     path: ""
+    extension: html
     format: raw
     exclude: [README.md, LICENSE, .pages.yml]
     fields:
