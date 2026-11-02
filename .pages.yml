@@ -5,10 +5,8 @@ content:
     type: collection
     path: ""
     extension: html
-    format: raw                  # Keep raw since your HTML files have no front matter
+    format: raw
     exclude: [README.md, LICENSE, .pages.yml]
-    view:
-      fields: [name]             # Change this to [name] to show the filename in the sidebar
     fields:
       - name: body
         label: Page Content
