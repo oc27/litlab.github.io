@@ -5,7 +5,7 @@ content:
     type: collection
     path: ""
     extension: html
-    format: code                # Switches the view mode to handle file paths properly
+    format: code
     exclude: [README.md, LICENSE, .pages.yml]
     fields:
       - name: body
