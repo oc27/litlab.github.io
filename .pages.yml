@@ -34,7 +34,7 @@ content:
         key: ""
 
   - name: experiments
-    label: Experiments Page
+    label: Experiments 2 Revenge
     type: file
     path: "Experiment 2: Revenge"
     format: raw
