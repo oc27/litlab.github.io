@@ -33,7 +33,7 @@ content:
         type: rich-text
         key: ""
 
-  - name: experiments
+  - name: experiment-1
     label: Experiments 2 Revenge
     type: file
     path: "experiment-1.html"
