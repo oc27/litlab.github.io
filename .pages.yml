@@ -5,15 +5,11 @@ content:
     type: collection
     path: ""
     extension: html
-    format: yaml-frontmatter   # 1. Changed from 'raw' to save titles properly
+    format: raw                  # Keep raw since your HTML files have no front matter
     exclude: [README.md, LICENSE, .pages.yml]
     view:
-      fields: [title]          # 2. Correct syntax to show the title in the sidebar list
+      fields: [name]             # Change this to [name] to show the filename in the sidebar
     fields:
-      - name: title
-        label: Page Title
-        type: string
-        required: true
       - name: body
         label: Page Content
         type: rich-text
